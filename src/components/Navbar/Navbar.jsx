@@ -13,10 +13,13 @@ const Navbar = () => {
                 Home
             </Button>
             <Button sx={{ color: "white" }}>
-                Categorias
+                Accesorios
             </Button>
             <Button sx={{ color: "white" }}>
-                Productos
+                Mangas
+            </Button>
+            <Button sx={{ color: "white" }}>
+                Cosplay
             </Button>
             <CartWidget />
         </Toolbar>
