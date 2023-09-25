@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "image": "product1.jpg",
+        "tittle": "producto 1",
+        "price": 25.50,
+        "category": "ropa",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 2,
+        "image": "product2.jpg",
+        "tittle": "producto 2",
+        "price": 25.50,
+        "category": "ropa",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 3,
+        "image": "product3.jpg",
+        "tittle": "producto 3",
+        "price": 25.50,
+        "category": "ropa",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 4,
+        "image": "product4.jpg",
+        "tittle": "producto 4",
+        "price": 25.50,
+        "category": "ropa",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 5,
+        "image": "product5.jpg",
+        "tittle": "producto 5",
+        "price": 25.50,
+        "category": "ropa",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 6,
+        "image": "product6.jpg",
+        "tittle": "producto 6",
+        "price": 25.50,
+        "category": "calzado",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 7,
+        "image": "product7.jpg",
+        "tittle": "producto 7",
+        "price": 25.50,
+        "category": "calzado",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 8,
+        "image": "product8.jpg",
+        "tittle": "producto 8",
+        "price": 25.50,
+        "category": "calzado",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 9,
+        "image": "product9.jpg",
+        "tittle": "producto 9",
+        "price": 25.50,
+        "category": "calzado",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 10,
+        "image": "product10.jpg",
+        "tittle": "producto 10",
+        "price": 25.50,
+        "category": "calzado",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 11,
+        "image": "product11.jpg",
+        "tittle": "producto 11",
+        "price": 25.50,
+        "category": "suplementos",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 12,
+        "image": "product12.jpg",
+        "tittle": "producto 12",
+        "price": 25.50,
+        "category": "suplementos",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 13,
+        "image": "product13.jpg",
+        "tittle": "producto 13",
+        "price": 25.50,
+        "category": "suplementos",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 14,
+        "image": "product14.jpg",
+        "tittle": "producto 14",
+        "price": 25.50,
+        "category": "suplementos",
+        "itHasDues": true,
+        "isAnOffer": false
+    },
+    {
+        "id": 15,
+        "image": "product15.jpg",
+        "tittle": "producto 15",
+        "price": 25.50,
+        "category": "suplementos",
+        "itHasDues": true,
+        "isAnOffer": false
+    }
+]
