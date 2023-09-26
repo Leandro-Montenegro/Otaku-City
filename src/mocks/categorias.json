@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "category": "Mujeres"
+        "category": "cosplay"
     },
     {
         "id": 1,
-        "category": "Niños"
+        "category": "accesorios"
     },
     {
         "id": 1,
-        "category": "Hombres"
+        "category": "mangas"
     }
 
 ]
