@@ -1,7 +1,7 @@
 import { Card, CardContent, CircularProgress, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
 import useAsyncMock from "../../hooks/useAsyncMock";
-import categories from "../../mocks/categorias.json";
+import categories from '../../mocks/categorias.json';
+import { Link } from "react-router-dom";
 
 const Categories = () => {
     const { data, loading } = useAsyncMock(categories)
@@ -9,7 +9,7 @@ const Categories = () => {
     if (loading) return <CircularProgress />
 
     return (<div className="container">
-        <Typography variant="h2" style={{ color: "black" }}>
+        <Typography variant="h2" sytle={{ color: "#8f8C8C" }}>
             Categorias
         </Typography>
         {
@@ -19,11 +19,11 @@ const Categories = () => {
                         <CardContent component={Link} to={`/category/${category.category}`}>
                             <Typography >{category.category}</Typography>
                         </CardContent>
-                </Card>
-            )
-    })
-}
-    </div >);
+                    </Card>
+                )
+            })
+        }
+    </div>);
 }
 
 export default Categories;

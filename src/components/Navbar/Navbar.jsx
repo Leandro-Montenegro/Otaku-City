@@ -1,30 +1,34 @@
-import {AppBar, Button, Toolbar, Typography} from "@mui/material";
-import CartWidget from "../CartWidget/CartWidget";
-import "./Navbar.css";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
 
 const Navbar = () => {
 
-    return (<AppBar>
-        <Toolbar className="toolbar-navbar" sx={{ display: "flex", justifyContent:"space-around"}}>
+    return (
+        <AppBar sx={{ backgroundColor: "#33082E" }}>
+            <Toolbar sx={{ display: "flex", justifyContent: "space-around" }}>
             <NavLink className="navbar-link" to="/" sx={{ color: "white" }}>
-                <Typography sx={{ color: "black"}}>
+                <Typography sx={{ color: "white"}}>
                     Otaku city
                 </Typography>
             </NavLink>
-            <NavLink className="navbar-link" to="/" sx={{ color: "white" }}>
-                <Typography >
-                    Home
-                </Typography>
-            </NavLink>
-            <NavLink className="navbar-link" to="/products" sx={{ color: "white" }}>
-                <Typography >
-                    Products
-                </Typography>
-            </NavLink>
-            <CartWidget />
-        </Toolbar>
-    </AppBar>);
+                <NavLink className="navbar-link" to="/">
+                    <Typography >
+                        Home/Categorías
+                    </Typography>
+                </NavLink>
+                <NavLink className="navbar-link" to="/products">
+                    <Typography >
+                        Productos
+                    </Typography>
+                </NavLink>
+                <NavLink className="navbar-link" to="/cart">
+                    <CartWidget />
+                </NavLink>
+
+            </Toolbar>
+        </AppBar>
+    );
 }
 
 export default Navbar;

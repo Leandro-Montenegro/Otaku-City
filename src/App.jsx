@@ -1,30 +1,28 @@
-import { useState } from "react"
 import './style.css'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import Categories from './components/categories/Categories'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ProductList from './components/products/ProductList'
+import CategoriesProductList from './components/categories/CategoriesProductList'
 import Navbar from './components/Navbar/Navbar'
-import Categories from "./components/categories/Categories"
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import ProductList from "./components/products/ProductList"
-import CategoriesProductList from "./components/categories/CategoriesProductList"
-
+import Cart from './components/Cart/Cart'
+import CartProvider from './context/CartContext'
 
 function App() {
-  const greeting = "Bienvenido/a, en esta tienda encontraras ropa, accesorios y mangas para satisfacer tus necesidades."
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <ItemListContainer greeting={greeting}/>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path= "/" element={<Categories/>} />
-        <Route exact path="/products" element={<ProductList />} />
-        <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
-      </Routes>
+      <CartProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route exact path='/' element={<Categories />} />
+            <Route exact path="/products" element={<ProductList />} />
+            <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
+            <Route exact path="/cart" element={<Cart />} />
+          </Routes>
+        </Router>
+      </CartProvider>
 
-    </Router>
-      
     </>
   )
 }
