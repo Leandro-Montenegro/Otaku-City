@@ -6,6 +6,8 @@ import CategoriesProductList from './components/categories/CategoriesProductList
 import Navbar from './components/Navbar/Navbar'
 import Cart from './components/Cart/Cart'
 import CartProvider from './context/CartContext'
+import CheckOut from './components/CheckOut/CheckOut'
+
 
 function App() {
 
@@ -14,11 +16,13 @@ function App() {
       <CartProvider>
         <Router>
           <Navbar />
+          <CheckOut/>
           <Routes>
             <Route exact path='/' element={<Categories />}/>
             <Route exact path="/products" element={<ProductList />} />
             <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path='/checkout' element={<CheckOut />} />
           </Routes>
         </Router>
       </CartProvider>
