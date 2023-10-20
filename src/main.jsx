@@ -23,15 +23,8 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 
 
-/*products.forEach((product) => {
-  addDoc(collection(db, "products"), product)
-  .then((docRef => {
-    console.log("documento agregado con id: ", docRef.id)
-  }))
-  .catch((error) => {
-    console.error("error al agregar documento", error)
-  })
-})*/
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

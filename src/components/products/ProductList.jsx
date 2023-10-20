@@ -32,7 +32,7 @@ const ProductList= ()=>{
             {
                 data.map((product) =>{
                     return(
-                        <ProductDetail key={products.id} product={products}>
+                        <ProductDetail key={product.id} product={product}>
 
                         </ProductDetail>
                     )

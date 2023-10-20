@@ -39,7 +39,7 @@ const Cart = () => {
                                 {cart.items.map((item) => (
                                     <TableRow key={item.id}>
                                         <TableCell><img style={{ width: "10%", height: "10%" }} src={item.image} alt={item.title} /></TableCell>
-                                        <TableCell>{item.title}</TableCell>
+                                        <TableCell>{item.title} x{item.quantity}</TableCell>
                                         <TableCell>${item.price}</TableCell>
                                         <TableCell>${item.price * item.quantity}</TableCell>
                                     </TableRow>

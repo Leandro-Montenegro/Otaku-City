@@ -123,7 +123,6 @@
 
 .modal-scroll-content {
     max-height: 200px;
-    /* Ajusta la altura máxima según tus necesidades */
     overflow-y: auto;
 }
 
@@ -168,5 +167,3 @@
 .cart-container .MuiTypography-root {
     margin: 10px 0;
 }
-
-/* Cambia los colores y estilos según tus preferencias */

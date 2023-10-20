@@ -15,7 +15,7 @@ const ProductDetail = ({ product, children }) => {
     return (<>
         <Grid item xs={12} sm={6} md={4} lg={3}>
             <Card className="card-products-container" onClick={handleClick}>
-                <img src={image} style={{width:"300px", padding:"7px"}}/>
+                <img src={image} style={{width:"300px", height:"400px", padding:"7px"}}/>
                 <CardContent className="card-products-content">
                     <Typography>{title}</Typography>
                     <Typography style={{color:"gray"}}>{category}</Typography>
