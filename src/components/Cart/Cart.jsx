@@ -9,10 +9,10 @@ import {
     TableRow,
     Typography,
 } from "@mui/material";
-import { useCartContext } from "../../context/CartContext";
+import { CartContext, useCartContext } from "../../context/CartContext";
 
 const Cart = () => {
-    const { cart } = useCartContext();
+    const { cart, handleVaciar  } = useCartContext(CartContext);
 
     return (
         <div className="container">
@@ -51,8 +51,10 @@ const Cart = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
+                    
                 )}
             </Paper>
+            <button onClick={handleVaciar}>Vaciar Carrito</button>
         </div>
     );
 };

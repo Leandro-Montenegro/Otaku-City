@@ -1,29 +1,31 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Typography } from '@mui/material';
-import { useCartContext } from '../../context/CartContext';
+import { CartContext, useCartContext } from '../../context/CartContext';
+
 const CartWidget = () => {
-    const { cart } = useCartContext();
+    const { cart } = useCartContext(CartContext);
+
     const getQuantityItems = () => {
-        let quantity = 0
-        if (cart.items.length > 0) {
-            for (let index = 0; index < cart.items.length; index++) {
-                quantity += cart.items[index].quantity;
-            }
+        if (cart.items.length === 0) {
+            return 0; 
         }
 
+        let quantity = 0;
+        for (let index = 0; index < cart.items.length; index++) {
+            quantity += cart.items[index].quantity;
+        }
         return quantity;
     }
 
-    let quantity = getQuantityItems();
+    const quantity = getQuantityItems();
 
-    console.log(cart)
+    console.log(cart);
+
     return (
         <div style={{ display: "flex", alignItems: "center" }}>
             <ShoppingCartIcon />
             <Typography>{quantity}</Typography>
         </div>
-
-
     );
 }
 

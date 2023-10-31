@@ -16,7 +16,6 @@ function App() {
       <CartProvider>
         <Router>
           <Navbar />
-          <CheckOut/>
           <Routes>
             <Route exact path='/' element={<Categories />}/>
             <Route exact path="/products" element={<ProductList />} />
