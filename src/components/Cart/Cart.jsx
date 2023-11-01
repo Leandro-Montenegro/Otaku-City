@@ -8,11 +8,14 @@ import {
     TableHead,
     TableRow,
     Typography,
+    Button,
 } from "@mui/material";
-import { CartContext, useCartContext } from "../../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
+
 
 const Cart = () => {
-    const { cart, handleVaciar  } = useCartContext(CartContext);
+    const { cart, vaciarCarrito, removeFromCart } = useCartContext();
+
 
     return (
         <div className="container">
@@ -33,28 +36,42 @@ const Cart = () => {
                                     <TableCell>Producto</TableCell>
                                     <TableCell>Precio</TableCell>
                                     <TableCell>Total</TableCell>
+                                    <TableCell>Quitar</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {cart.items.map((item) => (
                                     <TableRow key={item.id}>
-                                        <TableCell><img style={{ width: "10%", height: "10%" }} src={item.image} alt={item.title} /></TableCell>
+                                        <TableCell>
+                                            <img style={{ width: "10%", height: "10%" }} src={item.image} alt={item.title} />
+                                        </TableCell>
                                         <TableCell>{item.title} x{item.quantity}</TableCell>
                                         <TableCell>${item.price}</TableCell>
                                         <TableCell>${item.price * item.quantity}</TableCell>
+                                        <TableCell>
+                                            <Button
+                                                variant="contained"
+                                                color="secondary"
+                                                onClick={() => removeFromCart(item.id)} 
+                                            >
+                                                Quitar
+                                            </Button>
+                                        </TableCell>
                                     </TableRow>
                                 ))}
                                 <TableRow>
                                     <TableCell colSpan={3}>Total:</TableCell>
-                                    <TableCell>${cart.total.toFixed(2)}</TableCell>
+                                    <TableCell>${cart.total?.toFixed()}</TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    
                 )}
+
+                <Button variant="contained" color="secondary" onClick={vaciarCarrito}>
+                    Vaciar Carrito
+                </Button>
             </Paper>
-            <button onClick={handleVaciar}>Vaciar Carrito</button>
         </div>
     );
 };

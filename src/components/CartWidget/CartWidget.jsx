@@ -3,19 +3,29 @@ import { Typography } from '@mui/material';
 import { CartContext, useCartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
-    const { cart } = useCartContext(CartContext);
+    const { cart  } = useCartContext();
 
     const getQuantityItems = () => {
-        if (cart.items.length === 0) {
-            return 0; 
-        }
 
         let quantity = 0;
-        for (let index = 0; index < cart.items.length; index++) {
-            quantity += cart.items[index].quantity;
-        }
+        
+        if (!cart.items) {
+        
         return quantity;
-    }
+        
+        } else {
+        
+        for (let index = 0; index < cart.items.length; index++) {
+        
+        quantity += cart.items[index].quantity;
+        
+        }
+        
+        return quantity;
+        
+        }
+        
+        };
 
     const quantity = getQuantityItems();
 

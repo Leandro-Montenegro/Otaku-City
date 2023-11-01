@@ -18,7 +18,6 @@ const ProductDetail = ({ product, children }) => {
                 <img src={image} style={{width:"300px", height:"400px", padding:"7px"}}/>
                 <CardContent className="card-products-content">
                     <Typography>{title}</Typography>
-                    <Typography>{category}</Typography>
                     <Typography style={{color:"gray"}}>{category}</Typography>
                     <Typography>${price}</Typography>
                 </CardContent>
