@@ -11,11 +11,19 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState({ items: carritoInicial, total: 0 });
     
     const removeFromCart = (productId) => {
-        console.log(productId)
-        const updatedCart = cart.items.filter(item => item.id !== productId);
-        setCart({ items: updatedCart });
+        const removedProduct = cart.items.find(item => item.id === productId);
+    
+        if (removedProduct) {
+            const updatedCartItems = cart.items.filter(item => item.id !== productId);
+            const updatedTotal = cart.total - (removedProduct.price * removedProduct.quantity);
+    
+            setCart({
+                items: updatedCartItems,
+                total: updatedTotal
+            });
+        }
     };
-
+    
     const addToCart = (product) => {
         let prod = cart.items.find(p => p.id == product.id);
         if (prod) {

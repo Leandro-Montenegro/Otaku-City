@@ -11,11 +11,15 @@ import {
     Button,
 } from "@mui/material";
 import { useCartContext } from "../../context/CartContext";
-
+import { useNavigate } from "react-router-dom"; 
 
 const Cart = () => {
     const { cart, vaciarCarrito, removeFromCart } = useCartContext();
+    const navigate = useNavigate(); 
 
+    const handleCheckout = () => {
+        navigate('/checkout');
+    };
 
     return (
         <div className="container">
@@ -67,9 +71,11 @@ const Cart = () => {
                         </Table>
                     </TableContainer>
                 )}
-
                 <Button variant="contained" color="secondary" onClick={vaciarCarrito}>
                     Vaciar Carrito
+                </Button>
+                <Button variant="contained" color="primary" onClick={handleCheckout}>
+                    Finalizar Compra
                 </Button>
             </Paper>
         </div>

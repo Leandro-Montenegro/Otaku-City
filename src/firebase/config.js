@@ -13,7 +13,6 @@ const firebaseConfig = {
     storageBucket: "otakucity-fb703.appspot.com",
     messagingSenderId: "264339221760",
     appId: "1:264339221760:web:c39f25bb2271e70b11d7e5",
-    measurementId: "G-LBPQGC889Y"
 };
 
 // Initialize Firebase

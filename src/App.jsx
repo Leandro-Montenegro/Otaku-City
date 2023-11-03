@@ -21,7 +21,7 @@ function App() {
             <Route exact path="/products" element={<ProductList />} />
             <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
             <Route exact path="/cart" element={<Cart />} />
-            <Route exact path='/checkout' element={<CheckOut />} />
+            <Route exact path='/checkout' element={<CheckOut/>} />
           </Routes>
         </Router>
       </CartProvider>
