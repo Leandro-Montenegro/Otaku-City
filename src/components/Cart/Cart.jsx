@@ -61,7 +61,7 @@ const Cart = () => {
                                 ))}
                                 <TableRow>
                                     <TableCell colSpan={3}>Total:</TableCell>
-                                    <TableCell>${cart.total?.toFixed()}</TableCell>
+                                    <TableCell>${cart.total?.toFixed(2)}</TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>

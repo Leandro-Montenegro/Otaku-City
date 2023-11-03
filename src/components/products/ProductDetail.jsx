@@ -8,6 +8,16 @@ const ProductDetail = ({ product, children }) => {
     const [newProduct, setNewProduct] = useState()
     const [isSelected, setIsSelected] = useState(false);
 
+    useEffect(()  => {
+        const db = getFirestore();
+
+        const productCollection = query(collection(db, "products"), limit(2));
+        getDocs(productCollection).then((snapshot) => {
+            setNewProduct(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+        })
+    }, [])
+
+    console.log("holaaa", newProduct)
     const handleClick = () => {
         setIsSelected((prev) => !prev)
     }
